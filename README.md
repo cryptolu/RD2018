@@ -8,7 +8,7 @@ python3, pdflatex and various latex packages (mainly 'labels').
 
 ## Usage
 
-1. For example, generate 10 sets of boards. Each board contains 6 identical 6 sheets. The generated .tex file is automatically compiled using pdflatex.
+1. For example, generate 10 sets of boards. Each set of boards contains 6 identical sheets. The generated .tex file is automatically compiled using pdflatex.
 
 ```bash
 > cd build
