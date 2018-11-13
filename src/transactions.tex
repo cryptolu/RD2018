@@ -1,0 +1,38 @@
+\documentclass[a4paper,17pt]{memoir}
+
+\usepackage{DejaVuSansMono}
+
+\usepackage[newdimens]{labels}
+\LabelCols=4           % Number of columns of labels per page
+\LabelRows=12          % Number of rows of labels per page
+
+\LeftPageMargin=7mm    % These four parameters give the
+\RightPageMargin=7mm   % page gutter sizes. The outer edges of
+\TopPageMargin=7mm     % the outer labels are the specified
+\BottomPageMargin=7mm  % distances from the edge of the paper.
+
+\InterLabelColumn=0mm  % Gap between columns of labels
+\InterLabelRow=0mm     % Gap between rows of labels
+
+\LeftLabelBorder=5mm   % These four parameters give the extra
+\RightLabelBorder=5mm  % space used around the text on each
+\TopLabelBorder=1mm    % actual label.
+\BottomLabelBorder=1mm %
+
+\LabelGridtrue
+
+% \hspace*{\fill}
+\newcommand{\trans}[1]{\hspace*{\fill}\Huge{\insertspace{#1}}}
+
+\newcommand{\doinsertspace}[1]{ #1}
+\makeatletter
+\newcommand{\insertspace}[1]{%
+	\@tfor\next:=#1\do{\doinsertspace{\next}}
+}
+\makeatother
+
+\begin{document}
+
+\labelfile{transactions.dat}
+
+\end{document}
